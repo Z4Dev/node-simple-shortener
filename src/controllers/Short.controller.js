@@ -17,7 +17,7 @@ export const createShort = async (req,res) => {
     console.log(req.body)
     if(req.query.link) {
         const code = randomString(5)
-        const newuser = Link.create({
+        const newuser = await Link.create({
             code: code,
             redirect: req.query.link
         })
@@ -25,7 +25,7 @@ export const createShort = async (req,res) => {
     }
     if(req.body.link) {
         const code = randomString(5)
-        const newuser = Link.create({
+        const newuser = await Link.create({
             code: code,
             redirect: req.body.link
         })
