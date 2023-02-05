@@ -6,6 +6,7 @@ import path from 'path';
 import dotenv from 'dotenv';
 import mustacheExpress from 'mustache-express';
 import bodyParser from 'body-parser';
+import { sqlite3 } from 'sqlite3';
 
 dotenv.config()
 
