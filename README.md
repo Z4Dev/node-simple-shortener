@@ -7,7 +7,7 @@ A small project developed for studies
 
 ## Reference
 
- - [Deploy](https://js-encurtador.vercel.app/short)
+ - [Demo](https://js-encurtador.vercel.app/short)
 
 
 ## Stack Used
