@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{title}}</title>
+        <link rel="stylesheet" href="/home/style.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    </head>
+    <body>
+        <div class="container" data-aos="zoom-in">
+            <div class="title">URL Shortener</div>
+            <div class="description">Encurtar um link nunca foi tão fãcil! Use agora o nosso encurtador para ter o seu link reduzido! Este site foi desenvolvido por João SIlva em 2023.</div>
+            <input type="text" name="URL" id="Link" maxlength="300" placeholder="O link que deseja encurtar">
+            <button onclick="Submit()" id="Encurtar">Encurtar</button>
+        </div>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="/home/script.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
+    </body>
+</html>
