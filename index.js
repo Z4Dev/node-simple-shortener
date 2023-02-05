@@ -6,7 +6,6 @@ import path from 'path';
 import dotenv from 'dotenv';
 import mustacheExpress from 'mustache-express';
 import bodyParser from 'body-parser';
-import serverless from 'serverless-http'
 
 dotenv.config()
 
