@@ -23,7 +23,7 @@ export const createShort = async (req,res) => {
         })
         res.status(200).json({code:code})
     }
-    if(req.body.link) {
+    else if(req.body.link) {
         const code = randomString(5)
         const newuser = await Link.create({
             code: code,
