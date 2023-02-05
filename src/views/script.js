@@ -35,7 +35,7 @@ function Submit() {
             console.log(response)
             if(response.code) {
                 getbutton.innerText = 'Copiar';
-                geturl.value = 'https://test/'+response.code;
+                geturl.value = 'https://js-encurtador.vercel.app/'+response.code;
                 Toast.fire({
                     icon: 'success',
                     title: 'URL Encurtada com sucesso!'

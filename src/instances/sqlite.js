@@ -1,11 +1,15 @@
 import {Sequelize} from 'sequelize';
 import dotenv from 'dotenv';
-dotenv.config()
+import path from 'path';
+dotenv.config();
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export const sequelize = new Sequelize(
     {
         dialect: 'sqlite',
-        storage: './src/database/database.sqlite'
+        storage: path.join(__dirname,'../database/database.sqlite')
     }
 )
 
