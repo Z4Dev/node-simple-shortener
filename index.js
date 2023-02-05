@@ -6,6 +6,7 @@ import path from 'path';
 import dotenv from 'dotenv';
 import mustacheExpress from 'mustache-express';
 import bodyParser from 'body-parser';
+import serverless from 'serverless-http'
 
 dotenv.config()
 
@@ -24,15 +25,12 @@ server.use('/home', express.static('src/views'))
 
 sequelize.authenticate().then(() => {
     console.log('Connection has been established successfully.');
-    sequelize.sync().then(() => {
-        console.log('Book table created successfully!');
-     }).catch((error) => {
-        console.error('Unable to create table : ', error);
-     });
- }).catch((error) => {
+    sequelize.sync()
+}).catch((error) => {
     console.error('Unable to connect to the database: ', error);
- });
+});
 
-server.listen(process.env.SERVER_PORT, () => {
-    console.log('http://localhost:' + process.env.SERVER_PORT)
+const port = process.env.PORT || 3000
+server.listen(port, () => {
+    console.log('http://localhost:' + port)
 })
