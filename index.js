@@ -29,7 +29,7 @@ sequelize.authenticate().then(() => {
     console.error('Unable to connect to the database: ', error);
 });
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 9999
 server.listen(port, () => {
     console.log('http://localhost:' + port)
 })
