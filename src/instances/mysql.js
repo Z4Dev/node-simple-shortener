@@ -7,9 +7,12 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export const sequelize = new Sequelize(
+    process.env.DATABASE,
+    process.env.USER,
+    process.env.PASSWORD,
     {
-        dialect: 'sqlite',
-        storage: path.join(__dirname,'../database/database.sqlite')
+        dialect: 'mysql',
+        host: process.env.HOST
     }
 )
 

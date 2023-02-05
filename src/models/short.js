@@ -1,5 +1,5 @@
 import {Model,DataTypes} from 'sequelize';
-import {sequelize} from '../instances/sqlite.js';
+import {sequelize} from '../instances/mysql.js';
 
 export const Link = sequelize.define("Link", {
     id: {

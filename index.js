@@ -1,12 +1,12 @@
 import express from 'express';
-import { sequelize } from './src/instances/sqlite.js';
+import { sequelize } from './src/instances/mysql.js';
 import routes from './src/routes/short.js';
 import { fileURLToPath } from 'url';
 import path from 'path';
 import dotenv from 'dotenv';
 import mustacheExpress from 'mustache-express';
 import bodyParser from 'body-parser';
-import * as sqlite from 'sqlite3';
+import * as mysql from 'mysql2';
 import cors from 'cors';
 
 const corsOptions = {
